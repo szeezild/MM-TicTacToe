@@ -24,9 +24,11 @@
     
 }
 
+
 - (UILabel*)findLabelUsingPoint:(CGPoint)point;
 - (NSString *)whoOne;
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+
 
 @end
 
