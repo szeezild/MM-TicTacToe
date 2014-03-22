@@ -28,6 +28,7 @@
 - (UILabel*)findLabelUsingPoint:(CGPoint)point;
 - (NSString *)whoOne;
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+//- (void)nobodyWins;
 
 
 @end
@@ -38,6 +39,10 @@
 
 // start game as player X
 BOOL playerX = YES;
+//BOOL noOneWins = NO;
+
+int numberOfPlays = 0;
+
 
 
 - (void)viewDidLoad
@@ -76,6 +81,9 @@ BOOL playerX = YES;
     
 //  check if label is occupied and set label to X or O
     if ([chosenLabel.text isEqualToString:@""]) {
+        
+        numberOfPlays++;
+        
         if (playerX) {
             chosenLabel.text = @"X";
             chosenLabel.textColor = [UIColor blueColor];
@@ -90,13 +98,30 @@ BOOL playerX = YES;
     NSString *winner = [self whoOne];
     
     
+//    check to see if Cats Game
+//    [self nobodyWins];
+    
+    if (numberOfPlays >=9 ) {
+        UIAlertView *alertCat = [[UIAlertView alloc] initWithTitle:@"Tic Tac Toe" message:@"Cat's Game - No Winner" delegate:self cancelButtonTitle:@"Restart Game" otherButtonTitles:nil];
+        
+        numberOfPlays = 0;
+        
+        [alertCat show];
+    }
+    
+    
+    
 //  if someone wines, create AlertView
     if ([winner isEqualToString:@"X is the Winner"] || [winner isEqualToString:@"O is the Winner"]) {
+        
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Toe"
                                                         message:winner
                                                        delegate:self
                                               cancelButtonTitle:@"Restart Game"
                                               otherButtonTitles:nil];
+        numberOfPlays = 0;
+        
         [alert show];
     }
 
@@ -199,8 +224,17 @@ BOOL playerX = YES;
 }
 
 
+//- (void)nobodyWins {
+//    
+//    if ( !((myLabelOne.text = @"") && (myLabelTwo.text = @"") && (myLabelThree.text = @"") && (myLabelFour.text = @"") && (myLabelFive.text = @"") && (myLabelSix.text = @"") && (myLabelSeven.text = @"") && (myLabelEight.text = @"") && (myLabelNine.text = @"")) ) {
+//        
+//        noOneWins = YES;
+//    }
+//}
 
 
+
+@end
 
 
 
@@ -288,8 +322,6 @@ BOOL playerX = YES;
 //    return winnerIs;
 //}
 
-
-@end
 
 
 

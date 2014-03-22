@@ -21,7 +21,6 @@
 		07733D2F18D242DC0020A850 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07733D1118D242DC0020A850 /* UIKit.framework */; };
 		07733D3718D242DC0020A850 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07733D3518D242DC0020A850 /* InfoPlist.strings */; };
 		07733D3918D242DC0020A850 /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07733D3818D242DC0020A850 /* TicTacToeTests.m */; };
-		07733D4318D26B550020A850 /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07733D4218D26B550020A850 /* CheckMate.framework */; };
 		078D804918D3989500758D20 /* tictactoeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 078D804818D3989500758D20 /* tictactoeImage.png */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		07733D3418D242DC0020A850 /* TicTacToeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TicTacToeTests-Info.plist"; sourceTree = "<group>"; };
 		07733D3618D242DC0020A850 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07733D3818D242DC0020A850 /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
-		07733D4218D26B550020A850 /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
 		078D804818D3989500758D20 /* tictactoeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tictactoeImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07733D4318D26B550020A850 /* CheckMate.framework in Frameworks */,
 				07733D1018D242DC0020A850 /* CoreGraphics.framework in Frameworks */,
 				07733D1218D242DC0020A850 /* UIKit.framework in Frameworks */,
 				07733D0E18D242DC0020A850 /* Foundation.framework in Frameworks */,
@@ -106,7 +103,6 @@
 		07733D0C18D242DC0020A850 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07733D4218D26B550020A850 /* CheckMate.framework */,
 				07733D0D18D242DC0020A850 /* Foundation.framework */,
 				07733D0F18D242DC0020A850 /* CoreGraphics.framework */,
 				07733D1118D242DC0020A850 /* UIKit.framework */,
@@ -204,7 +200,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DS;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Dan Szeezil";
 				TargetAttributes = {
 					07733D2A18D242DC0020A850 = {
@@ -314,7 +310,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -353,7 +348,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -419,7 +413,6 @@
 		07733D4018D242DC0020A850 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TicTacToe.app/TicTacToe";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -442,7 +435,6 @@
 		07733D4118D242DC0020A850 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TicTacToe.app/TicTacToe";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

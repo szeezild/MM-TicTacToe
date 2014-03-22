@@ -7,7 +7,7 @@
 //
 
 #import "DSAppDelegate.h"
-#import <CheckMate/CheckMate.h>
+//#import <CheckMate/CheckMate.h>
 
 
 @implementation DSAppDelegate
@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [CheckMate initializeFramework:@"1d2af3bed66274cee600f65412501df6"];
+//    [CheckMate initializeFramework:@"1d2af3bed66274cee600f65412501df6"];
     
     return YES;
 }
